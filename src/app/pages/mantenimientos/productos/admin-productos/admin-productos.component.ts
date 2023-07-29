@@ -11,10 +11,16 @@ export class AdminProductosComponent {
   titulo = 'Crear Producto';
   constructor(public productoForm: ProductosForm, private srvProductos: ProductosService) {}
 
-guardar(){
-  if(this.productoForm.baseForm.valid){
-
+  guardar(): void {
+    if (this.productoForm.baseForm.valid) {
+      this.srvProductos.guardar(this.productoForm.baseForm.value).subscribe(
+        (dato) => {
+          alert('Se guardo correctamente');
+        },
+        (error) => {
+          alert('Error al guardar');
+        }
+      );
+    }
   }
-}
-
 }
