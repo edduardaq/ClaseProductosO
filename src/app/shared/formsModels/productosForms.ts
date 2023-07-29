@@ -11,7 +11,7 @@ export class ProductosForm{
             id: ['', [Validators.required]],
             nombre: ['', [Validators.required, Validators.minLength(5)]],
             precio: [0, [Validators.required]],
-            stock: [0,, [Validators.required]],
+            stock: [0, [Validators.required]],
             fechaIngreso: [Date.now, [Validators.required]],
             estado: [true],
         });

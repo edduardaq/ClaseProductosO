@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductosForm } from 'src/app/shared/formsModels/productosForms';
+import { ProductosService } from 'src/app/shared/services/productos.service';
 
 @Component({
   selector: 'app-admin-productos',
@@ -8,5 +9,12 @@ import { ProductosForm } from 'src/app/shared/formsModels/productosForms';
 })
 export class AdminProductosComponent {
   titulo = 'Crear Producto';
-  constructor(public productoForm: ProductosForm) {}
+  constructor(public productoForm: ProductosForm, private srvProductos: ProductosService) {}
+
+guardar(){
+  if(this.productoForm.baseForm.valid){
+
+  }
+}
+
 }

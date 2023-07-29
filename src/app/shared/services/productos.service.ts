@@ -12,4 +12,10 @@ export class ProductosService {
   getAll(): Observable<Productos[]> {
     return this.http.get<Productos[]>('http://localhost:3000/productos');
   }
+  guardar(producto:Productos):Observable<Productos>{
+
+    return this.http.post<Productos>("http://localhost:3000/productos",producto)
+
+
+  }
 }
